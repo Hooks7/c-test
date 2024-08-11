@@ -205,10 +205,39 @@ int main()
     // {
     //     printf("%d\n", 2);
     // }
- const char *str = "5"; // 字符串，而不是字符
-    double value = atof(str); // 将字符串转换为浮点数
-    printf("atof: %f\n", value); // 使用 %f 来打印浮点数
+    // const char *str = "5";       // 字符串，而不是字符
+    // double value = atof(str);    // 将字符串转换为浮点数
+    // printf("atof: %f\n", value); // 使用 %f 来打印浮点数
 
+    // 指针
+    // int arr[3] = {1,2,3};
+    // int *p;
+    // p = arr;
+
+    // for (int i = 0; i < 3; i++)
+    // {
+    //    scanf("%d",&arr[i]);
+    // }
+
+    // for (int i = 0; i < 3; i++)
+    // {
+    //    printf("ARR=%d",arr[i]);
+    // }
+
+    // int *pj;
+    // pj = 0;
+
+    // 字符串数组指针
+
+    char str[80];
+
+    char *p = str;
+
+    scanf("%s", p);
+
+    printf("%s\n", str);
+
+    printf("%s\n", "TIANTIAN" + 1);
 
     return 0;
 }
