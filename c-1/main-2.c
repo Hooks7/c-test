@@ -1,47 +1,39 @@
 #include <stdio.h>
 #include <string.h>
-// 自定义结构体类型
-struct student
+// 字符串拼接
+void concat(char *a, char *b, char *c)
 {
-    char name[20];
-    char no[10];
-    int age;
-} STU;
-
-STU *p, *q; //利用STU定义结构体类型指针变量p和q
-
-
-
-int main(void)
-{
-    STU stud[100], fit[100];
-
-    int num = 0, fit_count = 0, high = 0, low = 0, i = 0;
-
-    scanf("%d", &num);
-    p = stud;
-    q = fit;
-
-    for (int i = 0; i < num; i++)
+    for (; *a != '\0';)
     {
-        getchar();
-        printf("请输入学生信息:");
-
-        sscanf("%s", (stud + i) -> no);
-        getchar();
-        sscanf("%s", (p + i) -> name);
-        getchar();
-        sscanf("%d", (p + i) -> age);
-        /* code */
-        getchar();
+        *c = *a;
+        a++;
+        c++;
     }
 
-    for (size_t i = 0; i < stud; i++)
+    for (; *b != '\0';)
     {
+        *c = *b;
+        b++;
+        c++;
+    }
 
-        printf("No：%s,Name：%s, Age：%d");
-        /* code */
-    };
+    *c = '\0';
+}
 
-    return 0;
-};
+int main()
+{
+
+    char s1[100], s2[100], s3[100];
+
+    printf("请输入S1");
+    fgets(s1, sizeof(s1), stdin); // 使用fgets获取用户输入
+
+    s1[strcspn(s1, "\n")] = '\0'; // 移除换行符
+    printf("请输入S2");
+    fgets(s2, sizeof(s1), stdin); // 使用fgets获取用户输入
+    s2[strcspn(s2, "\n")] = '\0'; // 移除换行符
+    concat(s1, s2, s3);
+
+    // 打印结果
+    printf("str1 = %s, str2 = %s, str3 (concat) = %s\n", s1, s2, s3);
+}
