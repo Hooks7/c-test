@@ -32,9 +32,17 @@ int main()
 
     // 数组名作为函数参数
 
-    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+   typedef int intArr[10]; 
+
+
+    intArr arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+
 
     int *arrA = arr;
+
+
 
     func(arr);
 
