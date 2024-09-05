@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/hukai/code/c-test/build",
+  "command": "/usr/bin/clang   -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -o CMakeFiles/c.dir/main.c.o -c /Users/hukai/code/c-test/c-1/main.c",
+  "file": "/Users/hukai/code/c-test/c-1/main.c",
+  "output": "CMakeFiles/c.dir/main.c.o"
+}
+]

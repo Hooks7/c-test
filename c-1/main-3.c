@@ -1,16 +1,31 @@
 #include <stdio.h>
-#include "add.h"
+#include <string.h>
+#include <stdlib.h>
 
-// 有参宏
-#define MAX(a, b) (a > b ? a : b)
-
-int main(void)
+// 写文件
+int main()
 {
 
-    int a = 3;
-    int b = 3;
+    FILE *fptr;
+    char string1[80];
+    char string2[80];
+    if ((fptr = fopen("/Users/hukai/Downloads/test.txt", "w")) == NULL)// 只读方式打开文本文件
+    {
+        printf("FILE cannot open\n");
+        exit(1);
+    }
+    else
+    {
 
-    printf("%d\n", add(a, b));
+        printf("input string :\n");
+        if (fgets(string1, sizeof(string1), stdin) != NULL)
+        {
+            fputs(string1, fptr); // 将输入的字符串写入文件
+        }
+
+
+        fclose(fptr);
+    }
 
     return 0;
 }
